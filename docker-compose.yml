@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  debugpy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: debugpy
+    ports:
+      - "5680:5680"
+    image: debugpy:latest
+    command: tail -f /dev/null
